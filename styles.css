@@ -18,6 +18,11 @@ body {
     .nav-links {
       list-style: none !important;
 }
+.nav-links a.active {
+  background-color: #555;
+  color: #fff;
+  text-decoration: underline;
+}
 
 
   h1, h2, h3 {
