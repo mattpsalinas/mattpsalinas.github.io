@@ -241,7 +241,42 @@ body {
       word-wrap: normal;
     }
   }
-  
+
+.navbar {
+  background-color: #333;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+
   /* Mobile-first responsive adjustments */
   @media screen and (max-width: 768px) {
     .wrapper {
@@ -276,54 +311,6 @@ body {
       position: static;
       text-align: center;
       margin-top: 50px;
-    }
-        /* Future Research table styling */
-      .research-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-      
-      .research-item {
-        background: #f8f8f8;
-        padding: 15px;
-        border-radius: 5px;
-        border: 1px solid #e5e5e5;
-      }
-    
-    .navbar {
-      background-color: #333;
-      padding: 0.5rem 0;
-      text-align: center;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-    
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-flex;
-      gap: 20px;
-    }
-    
-    .nav-links li {
-      display: inline;
-    }
-    
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      padding: 8px 16px;
-      transition: background-color 0.3s, color 0.3s;
-      border-radius: 4px;
-    }
-    
-    .nav-links a:hover {
-      background-color: #555;
-      color: #fff;
     }
   }
   
