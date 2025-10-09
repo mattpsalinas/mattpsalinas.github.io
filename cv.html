@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/d9596d689f.js" crossorigin="anonymous"></script>
+  <title>CV</title>
 </head>
 
 <body>
@@ -20,8 +21,29 @@
       </ul>
     </nav>
 
-    
+    <!-- PDF Embed Section -->
+    <section style="text-align:center; margin-top: 20px;">
+      <h2>Curriculum Vitae</h2>
+
+      <!-- Embedded PDF -->
+      <iframe 
+        src="cv.pdf" 
+        width="90%" 
+        height="800px" 
+        style="border: none; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 8px;">
+      </iframe>
+
+      <!-- Download Button -->
+      <div style="margin-top: 20px;">
+        <a href="cv.pdf" download class="download-btn" 
+           style="text-decoration: none; background-color: #333; color: white; padding: 10px 20px; border-radius: 6px; font-weight: bold;">
+          <i class="fa-solid fa-download"></i> Download CV
+        </a>
+      </div>
+    </section>
   </div>
+
+  <!-- iPhone gesture handling script -->
   <script>
     var metas = document.getElementsByTagName('meta');
     var i;
