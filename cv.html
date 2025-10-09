@@ -23,27 +23,20 @@
 
     <!-- PDF Embed Section -->
     <section style="text-align:center; margin-top: 20px;">
-      <h2>Curriculum Vitae</h2>
+  <h2>Curriculum Vitae</h2>
 
-      <!-- Embedded PDF (preferred for GitHub Pages) -->
-      <object 
-        data="cv.pdf" 
-        type="application/pdf" 
-        width="90%" 
-        height="800px" 
-        style="border:none; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius:8px;">
-        <p>Your browser does not support embedded PDFs. 
-           <a href="cv.pdf" target="_blank">Click here to view the CV.</a></p>
-      </object>
+  <div class="pdf-container">
+    <object data="cv.pdf" type="application/pdf">
+      <p>Your browser does not support embedded PDFs. 
+         <a href="cv.pdf" target="_blank">Click here to view the CV.</a></p>
+    </object>
+  </div>
 
-      <!-- Download Button -->
-      <div style="margin-top: 20px;">
-        <a href="cv.pdf" download 
-         style="text-decoration:none; background-color:#333; color:white; padding:10px 20px; border-radius:6px; font-weight:bold;">
-          <i class="fa-solid fa-download"></i> Download CV
-        </a>
-      </div>
-    </section>
+  <a href="cv.pdf" download class="download-btn">
+    <i class="fa-solid fa-download"></i> Download CV
+  </a>
+</section>
+
 
   </div>
 
