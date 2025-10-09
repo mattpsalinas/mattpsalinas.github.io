@@ -25,22 +25,26 @@
     <section style="text-align:center; margin-top: 20px;">
       <h2>Curriculum Vitae</h2>
 
-      <!-- Embedded PDF -->
-      <iframe 
-        src="cv.pdf" 
+      <!-- Embedded PDF (preferred for GitHub Pages) -->
+      <object 
+        data="cv.pdf" 
+        type="application/pdf" 
         width="90%" 
         height="800px" 
-        style="border: none; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius: 8px;">
-      </iframe>
+        style="border:none; box-shadow: 0 0 10px rgba(0,0,0,0.2); border-radius:8px;">
+        <p>Your browser does not support embedded PDFs. 
+           <a href="cv.pdf" target="_blank">Click here to view the CV.</a></p>
+      </object>
 
       <!-- Download Button -->
       <div style="margin-top: 20px;">
-        <a href="cv.pdf" download class="download-btn" 
-           style="text-decoration: none; background-color: #333; color: white; padding: 10px 20px; border-radius: 6px; font-weight: bold;">
+        <a href="cv.pdf" download 
+         style="text-decoration:none; background-color:#333; color:white; padding:10px 20px; border-radius:6px; font-weight:bold;">
           <i class="fa-solid fa-download"></i> Download CV
         </a>
       </div>
     </section>
+
   </div>
 
   <!-- iPhone gesture handling script -->
