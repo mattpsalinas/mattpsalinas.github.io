@@ -391,3 +391,26 @@ body {
   height: 85vh;
 }
 
+/* ==========================
+   CV FULL-WIDTH OVERRIDES
+   ========================== */
+
+/* Allow CV page to break out of wrapper */
+.cv-layout .wrapper {
+  max-width: none;
+  width: 100%;
+}
+
+/* Center and size the CV content */
+.cv-layout .cv-page {
+  max-width: 1200px;   /* controls desktop size */
+  margin: 40px auto;
+}
+
+/* Make the PDF truly large */
+.cv-layout .pdf-container object {
+  width: 100%;
+  height: 85vh;
+}
+
+
