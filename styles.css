@@ -327,137 +327,44 @@ body {
   }
   
 /* ==========================
-   PDF Embed Styles
+   CV PAGE (CLEAN REWRITE)
    ========================== */
-.pdf-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem auto;
+
+/* Break out of legacy layout ONLY on CV page */
+.cv-layout section {
   width: 100%;
-}
-
-.pdf-container object {
-  width: min(95vw, 1000px);
-  height: 85vh;
-  border: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border-radius: 8px;
-}
-
-.download-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.download-btn:hover {
-  background-color: #555;
-}
-
-@media screen and (max-width: 768px) {
-  .pdf-container object {
-    height: 70vh;
-    width: 95vw;
-  }
-}
-
-/* ==========================
-   CV PAGE LAYOUT FIX
-   ========================== */
-
-.cv-page {
-  width: 100% !important;
-  float: none !important;
+  float: none;
   padding: 0;
+  margin: 0;
+}
+
+/* Center CV content */
+.cv-page {
+  max-width: 1200px;
   margin: 40px auto;
   text-align: center;
 }
 
-/* Override old section width rules */
-.cv-page section {
-  width: 100%;
-}
-
-/* PDF sizing for desktop */
-.cv-page .pdf-container object {
-  width: 100%;
-  max-width: 1100px; /* desktop-friendly */
-  height: 85vh;
-}
-
-/* ==========================
-   CV FULL-WIDTH OVERRIDES
-   ========================== */
-
-/* Allow CV page to break out of wrapper */
-.cv-layout .wrapper {
-  max-width: none;
-  width: 100%;
-}
-
-/* Center and size the CV content */
-.cv-layout .cv-page {
-  max-width: 1200px;   /* controls desktop size */
-  margin: 40px auto;
-}
-
-/* Make the PDF truly large */
-.cv-layout .pdf-container object {
-  width: 100%;
-  height: 85vh;
-}
-
-section.cv-page {
-  width: 100% !important;
-  max-width: none !important;
-  float: none !important;
-  margin: 40px auto;
-}
-
-/* ==========================
-   FORCE PDF BOX SIZE
-   ========================== */
-
-.cv-page .pdf-container {
-  width: 100%;
-  min-height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.cv-page .pdf-container object {
-  display: block;
-  width: 100%;
-  max-width: 1100px;
-  height: 85vh;
-}
-
-/* ==========================
-   FIX PDF VIEWER SIZE (REAL FIX)
-   ========================== */
-
+/* PDF container */
 .cv-page .pdf-wrapper {
   width: 100%;
-  min-height: 85vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
 }
 
+/* PDF viewer */
 .cv-page .pdf-viewer {
-  display: block;
   width: 100%;
-  max-width: 1100px;
-  height: 85vh;
+  height: 100%;
   border: none;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
   border-radius: 8px;
 }
 
-
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .cv-page .pdf-wrapper {
+    height: 70vh;
+  }
+}
