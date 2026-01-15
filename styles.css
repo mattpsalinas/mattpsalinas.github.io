@@ -413,4 +413,12 @@ body {
   height: 85vh;
 }
 
+section.cv-page {
+  width: 100% !important;
+  max-width: none !important;
+  float: none !important;
+  margin: 40px auto;
+}
+
+
 
