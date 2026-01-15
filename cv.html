@@ -26,42 +26,18 @@
   <h2>Curriculum Vitae</h2>
 
   <div class="pdf-wrapper">
-    <object data="cv.pdf" type="application/pdf" class="pdf-viewer">
-      <p>
-        Your browser does not support embedded PDFs.
-        <a href="cv.pdf" target="_blank">Click here to view the CV.</a>
-      </p>
-    </object>
+        <iframe
+          src="cv.pdf"
+          class="pdf-viewer"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <a href="cv.pdf" download class="download-btn">
+        Download CV
+      </a>
+    </section>
   </div>
-
-  <a href="cv.pdf" download class="download-btn">
-    <i class="fa-solid fa-download"></i> Download CV
-  </a>
-</section>
-
-
-  </div>
-
-  <!-- iPhone gesture handling script -->
-  <script>
-    var metas = document.getElementsByTagName('meta');
-    var i;
-    if (navigator.userAgent.match(/iPhone/i)) {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-        }
-      }
-      document.addEventListener("gesturestart", gestureStart, false);
-    }
-    function gestureStart() {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-        }
-      }
-    }
-  </script>
 </body>
 
 </html>
