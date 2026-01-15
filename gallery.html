@@ -1,44 +1,155 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d9596d689f.js" crossorigin="anonymous"></script>
+
+  <title>Gallery</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 15px 30px;
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    /* Gallery layout */
+    .gallery {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .caption {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    /* Subtle fade-in on scroll */
+    .gallery-item {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      .gallery {
+        gap: 50px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research Projects</a></li>
-        <li><a href="gallery.html" class="active">Fieldwork Gallery</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-    </nav>
 
-    
-  </div>
-  <script>
-    var metas = document.getElementsByTagName('meta');
-    var i;
-    if (navigator.userAgent.match(/iPhone/i)) {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-        }
-      }
-      document.addEventListener("gesturestart", gestureStart, false);
-    }
-    function gestureStart() {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-        }
-      }
-    }
-  </script>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research Projects</a></li>
+      <li><a href="gallery.html" class="active">Fieldwork Gallery</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="gallery">
+
+    <section class="gallery-item">
+      <img src="Badwater Basin.jpg" alt="Badwater Basin Sign">
+      <p class="caption">
+        At Badwater Basin in Death Valley
+      </p>
+    </section>
+
+    <section class="gallery-item">
+      <img src="FOP 2025 Trip.jpg" alt="Group Pose at FOPt">
+      <p class="caption">
+        Posing for a photo near the Trona Pinnacles (CA) on the 2025 Friends of the Pleistocene Trip
+      </p>
+    </section>
+
+    <section class="gallery-item">
+      <img src="USC New Grad Retreat.jpg" alt="New Grad Retreat Group Photo">
+      <p class="caption">
+        Group photo of (most) of the 2025 USC Earth Sciences new PhD cohort during the Fall New Grad retreat (picture at Carpinteria Bluffs Nature Preserve - CA)
+      </p>
+    </section>
+
+    <section class="gallery-item">
+      <img src="Paleosol Camp Davis.jpg" alt="Sticking head in hole">
+      <p class="caption">
+        Examining a paleosol during UM Camp Davis Field course. Evidence that I have a love for looking at dirt in holes. Near Jackson Hole (WY)
+      </p>
+    </section>
+
+    <section class="gallery-item">
+      <img src="Camp Davis Group.jpg" alt="Sticking head in hole">
+      <p class="caption">
+        Group picture from the 2024 Camp Davis Field Methods course. Near Cody (WY)
+      </p>
+    </section>
+
+  </main>
+
 </body>
-
 </html>
