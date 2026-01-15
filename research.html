@@ -1,44 +1,149 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d9596d689f.js" crossorigin="anonymous"></script>
+
+  <title>Research Projects</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 15px 30px;
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    /* Page content */
+    .content {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .notice {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .notice h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .notice p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Skeleton project layout */
+    .project {
+      display: none; /* remove this line when ready to publish projects */
+      margin-bottom: 80px;
+    }
+
+    .project h2 {
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-images img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="research.html" class="active">Research Projects</a></li>
-        <li><a href="gallery.html">Fieldwork Gallery</a></li>
-        <li><a href="cv.html">CV</a></li>
-      </ul>
-    </nav>
 
-    
-  </div>
-  <script>
-    var metas = document.getElementsByTagName('meta');
-    var i;
-    if (navigator.userAgent.match(/iPhone/i)) {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-        }
-      }
-      document.addEventListener("gesturestart", gestureStart, false);
-    }
-    function gestureStart() {
-      for (i = 0; i < metas.length; i++) {
-        if (metas[i].name == "viewport") {
-          metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
-        }
-      }
-    }
-  </script>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="active">Research Projects</a></li>
+      <li><a href="gallery.html">Fieldwork Gallery</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+
+    <!-- Under construction message -->
+    <section class="notice">
+      <h1>Research Projects</h1>
+      <p>
+        This page is currently under construction.  
+        Project descriptions and media will be added soon.
+      </p>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FUTURE PROJECT SKELETON BELOW -->
+    <!-- ============================= -->
+
+    <!-- Example Project -->
+    <section class="project">
+      <h2>Project Title Goes Here</h2>
+
+      <p class="project-description">
+        Brief description of the research project.  
+        This can include research questions, methods, study area, or collaborators.
+      </p>
+
+      <div class="project-images">
+        <img src="images/project1_img1.jpg" alt="Project image 1">
+        <img src="images/project1_img2.jpg" alt="Project image 2">
+      </div>
+    </section>
+
+    <!-- Copy / paste additional project sections as needed -->
+
+  </main>
+
 </body>
-
 </html>
