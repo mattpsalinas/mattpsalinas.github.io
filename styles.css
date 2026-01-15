@@ -337,8 +337,8 @@ body {
 }
 
 .pdf-container object {
-  width: min(90vw, 900px);
-  height: 90vh;
+  width: min(95vw, 1000px);
+  height: 85vh;
   border: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 8px;
