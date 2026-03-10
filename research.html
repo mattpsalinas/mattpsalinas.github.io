@@ -88,13 +88,26 @@
 
     .project-images {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
 
+.project-images figure {
+  margin: 0;
+}
+
 .project-images img {
-  width: 500px;   /* control size here */
+  width: 100%;
   height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-images figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+  line-height: 1.5;
 }
   </style>
 </head>
