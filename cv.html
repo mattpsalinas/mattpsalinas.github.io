@@ -48,28 +48,14 @@
       border-bottom: 2px solid #333;
     }
 
-    .caption {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    /* Subtle fade-in on scroll */
-    .gallery-item {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 0.8s ease forwards;
-      animation-delay: 0.2s;
-    }
-
-    .cv-page h2 {
-      margin: 0 0 12px;
-      font-size: 1.6rem;
-      color: #222;
-    }
-
-    .cv-page p {
-      margin: 10px 0 0;
+   
+    .cv {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
     }
 
     /* make the download link look like a button and centered */
@@ -113,9 +99,10 @@
   </nav>
 
     <!-- PDF Embed Section -->
-    <section class="cv-page">
+    <main class="cv">
   <h2>Curriculum Vitae</h2>
 <p>
+  <section class="cv-download">
     <a href="cv.pdf" target="_blank" rel="noopener noreferrer">
       Download CV
     </a>
