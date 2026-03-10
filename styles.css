@@ -342,7 +342,9 @@ body {
 .cv-page {
   max-width: 1200px;
   margin: 40px auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers everything horizontally */
 }
 
 /* PDF container */
