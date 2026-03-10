@@ -1,21 +1,27 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Matthew Salinas</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d9596d689f.js" crossorigin="anonymous"></script>
-<style>
+
+  <title>Matthew Salinas</title>
+
+  <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f8f8f8;
       color: #222;
     }
-  /* Navbar */
+
+    /* Navbar */
     .navbar {
       background: #ffffff;
       border-bottom: 1px solid #ddd;
@@ -41,29 +47,60 @@
     .nav-links a.active {
       border-bottom: 2px solid #333;
     }
-  /* Subtle fade-in on scroll */
-    .gallery-item {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 0.8s ease forwards;
-      animation-delay: 0.2s;
+
+    /* Page Layout */
+    .home {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .profile {
+      text-align: center;
+      margin-bottom: 50px;
     }
 
-    /* Mobile tweaks */
-    @media (max-width: 600px) {
-      .gallery {
-        gap: 50px;
-      }
+    .profile img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .profile ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .profile a {
+      color: #333;
+      font-size: 18px;
+    }
+
+    section h2 {
+      margin-top: 40px;
+    }
+
+    blockquote {
+      margin: 8px 0 16px;
+      padding: 12px;
+      border-left: 3px solid #eee;
+      background: #fafafa;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      max-width: 1000px;
+      margin: 60px auto 30px;
+      padding: 0 20px;
+      color: #444;
+      font-size: 0.9rem;
     }
   </style>
-
 </head>
 
 <body>
